@@ -1,4 +1,8 @@
-<?php 
+<?php
+/**
+ * // declarar variáveis externas
+* @var $pdo
+*/
 include 'dbc.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -8,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $telefone = $_POST['telefone'];
     $cpf = $_POST['CPF'];
-    $IFMT = $_POST['IFMT'];
+    $ifmt = $_POST['IFMT'];
     $idade = $_POST['idade'];
 
     if ($usuario || $senha || $email || $telefone || $cpf != NULL) {
@@ -17,12 +21,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $stmt = $pdo->prepare("INSERT INTO usuario (Nome, Telefone, Email, Senha, CPF, IFMT, Idade) VALUES (:usuario, :telefone, :email, :senha, :cpf, :IFMT, :idade)");
 
-            $stmt->bindParam(':usuario', $usuario);
+            $stmt->bindParam(':usuario', $usuario); 
             $stmt->bindParam(':telefone', $telefone);
             $stmt->bindParam(':email', $email);
             $stmt->bindParam(':senha', $senha);
             $stmt->bindParam(':cpf', $cpf);
-            $stmt->bindParam(':IFMT', $IFMT);
+            $stmt->bindParam(':IFMT', $ifmt);
             $stmt->bindParam(':idade', $idade);
 
             if ($stmt->execute()) {
@@ -39,3 +43,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
 }
+?>

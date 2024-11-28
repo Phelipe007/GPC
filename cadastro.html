@@ -15,26 +15,31 @@
         <section>   
             <form action="cadastro.php" method="POST" >
 
-                <h3>Usuario:</h3>
-                <input type="text" name="usuario" id="usuario" placeholder="Digite o Seu Nome de Usurario"><br>
+                <label for="usuario">Usuario:</label>
+                <input type="text" name="usuario" id="usuario" placeholder="Digite o Seu Nome de Usurario" required><br>
 
-                <h3>Senha:</h3>
-                <input type="text" name="senha" id="senha" placeholder="Digite Sua Senha"><br>
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" id="senha" placeholder="Digite Sua Senha" required><br>
 
-                <h3>Email:</h3>
-                <input type="email" name="email" id="email" placeholder="Digite Seu Email"><br>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Digite Seu Email" required><br>
 
-                <h3>Telefone:</h3>
-                <input type="tel" name="telefone" id="telefone" placeholder="(xx) x xxxx-xxxx"><br>
+                <label for="telefone">Telefone:</label>
+                <input type="tel" name="telefone" id="telefone" placeholder="(xx) x xxxx-xxxx" required><br>
 
-                <h3>CPF:</h3>
-                <input type="text" name="CPF" id="CPF" placeholder="Digite Seu CPF"><br>
-                
-                 
-                
+                <label for="CPF">CPF:</label>
+                <input type="text" name="CPF" id="CPF" placeholder="Digite Seu CPF" required><br>
 
-                <h3>Qual a sua idade</h3>
-                <input type="number" name="idade" id="idade" placeholder="Digite Sua Idade"><br>
+                <label for="ifmt">Vínculo com o IFMT:</label>
+                <select name="ifmt" id="ifmt" required>
+                    <option value="">Selecione seu vínculo</option>
+                    <option value="servidor">Servidor</option>
+                    <option value="externo">Aluno</option>
+                    <option value="externo">Externo</option>
+                </select><br>
+
+                 <label for="idade">Qual a sua idade</label>
+                <input type="number" name="idade" id="idade" placeholder="Digite Sua Idade" required><br>
 
                 <input type="submit">
             </form>
