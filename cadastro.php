@@ -1,32 +1,32 @@
 <?php
 /**
- * // declarar variáveis externas
+* // declarar variáveis externas
 * @var $pdo
 */
 include 'dbc.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    $usuario = $_POST['usuario'];
+    $nome = $_POST['nome'];
     $senha = $_POST['senha'];
     $email = $_POST['email'];
     $telefone = $_POST['telefone'];
-    $cpf = $_POST['CPF'];
-    $ifmt = $_POST['IFMT'];
+    $cpf = $_POST['cpf'];
+    $ifmt = $_POST['ifmt'];
     $idade = $_POST['idade'];
 
     if ($usuario || $senha || $email || $telefone || $cpf != NULL) {
 
         try {
 
-            $stmt = $pdo->prepare("INSERT INTO usuario (Nome, Telefone, Email, Senha, CPF, IFMT, Idade) VALUES (:usuario, :telefone, :email, :senha, :cpf, :IFMT, :idade)");
+            $stmt = $pdo->prepare("INSERT INTO Usuario (nome, telefone, email, senha, cpf, ifmt, idade) VALUES (:nome, :telefone, :email, :senha, :cpf, :ifmt, :idade)");
 
-            $stmt->bindParam(':usuario', $usuario); 
+            $stmt->bindParam(':nome', $nome); 
             $stmt->bindParam(':telefone', $telefone);
             $stmt->bindParam(':email', $email);
             $stmt->bindParam(':senha', $senha);
             $stmt->bindParam(':cpf', $cpf);
-            $stmt->bindParam(':IFMT', $ifmt);
+            $stmt->bindParam(':ifmt', $ifmt);
             $stmt->bindParam(':idade', $idade);
 
             if ($stmt->execute()) {
