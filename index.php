@@ -8,16 +8,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (!empty($email) && !empty($senha)) {
         try {
             $stmt = $pdo->prepare("SELECT * FROM Usuario WHERE email = :email AND senha = :senha");
+            
             $stmt->bindParam(':email', $email);
             $stmt->bindParam(':senha', $senha);
             $stmt->execute();
 
-            $usuario = $stmt->fetch(); // Verifica se há resultados
+            // Verifica se há resultados
+            $usuario = $stmt->fetch();
             if ($usuario) {
                 echo "<script>alert('Login Realizado Com Sucesso');</script>";
-                // header('Location: cadastro.html'); // Descomente se necessário
+                
             } else {
-                echo "<script>alert('Não Foi Possível Realizar o Login');</script>";
+                //sleep(1);
+                echo "<script>alert('Senha ou Usuario Incorretos');</script>";
+                $i = true;
+                    if ($i == true){
+                        header('location: index.html');
+                        exit;
+                    } 
             }
         } catch (PDOException $e) {
             die("Erro: " . $e->getMessage());
