@@ -1,11 +1,11 @@
 <?php
-/**
-* // declarar variáveis externas
-* @var $pdo
-*/
-include 'dbc.php';
+
+//ncluindo a função salvaNoBanco()
+include 'salvarNoBanco.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    $tabela = "Usuario";
 
     $nome = $_POST['nome'];
     $senha = $_POST['senha'];
@@ -15,32 +15,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $ifmt = $_POST['ifmt'];
     $idade = $_POST['idade'];
 
-    if ($usuario || $senha || $email || $telefone || $cpf != NULL) {
-
-        try {
-
-            $stmt = $pdo->prepare("INSERT INTO Usuario (nome, telefone, email, senha, cpf, ifmt, idade) VALUES (:nome, :telefone, :email, :senha, :cpf, :ifmt, :idade)");
-
-            $stmt->bindParam(':nome', $nome); 
-            $stmt->bindParam(':telefone', $telefone);
-            $stmt->bindParam(':email', $email);
-            $stmt->bindParam(':senha', $senha);
-            $stmt->bindParam(':cpf', $cpf);
-            $stmt->bindParam(':ifmt', $ifmt);
-            $stmt->bindParam(':idade', $idade);
-
-            if ($stmt->execute()) {
-                echo "<script> alert('Cadastro Realizado Com Sucesso') </script>";
-            } else {
-                echo "<script> alert('Não Foi Possivel Realizar o Cadastro') </script>";
-            }
-
-        } catch (PDOException $e) {
-            die("Erro: " . $e->getMessage());
+    //enviarndo os valores do cadastr para o banco com a função salvaNoBanco(), e se for bem sucedida redirecionando para a pagina de login
+    if ($r = salvaNoBanco($tabela, ['nome', 'senha', 'email', 'telefone', 'cpf', 'ifmt', 'idade'], [$nome, $senha, $email, $telefone, $cpf, $ifmt, $idade]));{
+        echo "<script> window.location.href = 'index.html'; </script>"; //redirecionamento com JS
+        exit(); //apenas para evitar que o script entre em loop
     }
-    } else {
-        echo "<script> alert('É necessario responder todos os campos obrigatorios!')";
-    }
-
 }
 ?>

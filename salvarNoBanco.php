@@ -1,43 +1,32 @@
-<?php 
+<?php
+function salvaNoBanco($tabela, $campos, $valores) {
+    include "dbc.php";
 
-@var $pdo;
-
-include "dbc.php";
-
-function salvaNoBanco($tabela, $campos, $valores){
-    $sql = "INSERT INTO $tabela(";
-
-    for($i=0;$i<count($campos);$i++){
-        $sql = $sql . $campos[$i] . ", ";
+    // Verificação para saber se esles estão alinhados
+    if (count($campos) !== count($valores)) {
+        die("<script> alert(Erro: O número de campos e valores não corresponde.) </script>");
     }
 
-    $sql = $sql . ") VALUES (";
+    // Construindo a query
+    $sql = "INSERT INTO $tabela (" . implode(", ", $campos) . ") VALUES (";
+    $sql .= ":" . implode(", :", $campos) . ")";
 
-    for($i=0;$i<count($campos);$i++){
-        $sql = $sql . ":" . $campos[$i] . ", ";
-    }
+    try {
+        $stmt = $pdo->prepare($sql);
 
-    $sql = substr($sql, 0,strlen($sql)-2) . ")";
-    if (!empty($campos)){
-        try {
-
-            $stmt = $pdo->prepare($sql);
-
-            for($i=0;$i<count($valores);$i++){
-                $stmt->bindParam(':'. $campos[$i], $valores[$i]);
-            }
-
-            if ($stmt->execute()){
-                echo "<script> alert('Formulario Enviado Com Sucesso!') </script>";
-            } else {
-                echo "<script> alert('Formulario Não Enviado!') </script>"; 
-            }
-            
-        } catch (PDOException $e) {
-            die ("Erro: " . $e->getMessage());
+        // Associando os valores
+        for ($i = 0; $i < count($campos); $i++) {
+            $stmt->bindParam(":" . $campos[$i], $valores[$i]);
         }
-    } else {
-        echo "Preencha Todos os Campos!";
+
+        if ($stmt->execute()) {
+            echo "<script> alert('Formulário enviado com sucesso!') </script>";
+            return $r = true;
+        } else {
+            echo "<script> alert('Erro ao enviar formulário.') </script>";
+        }
+    } catch (PDOException $e) {
+        die("Erro: " . $e->getMessage());
     }
 }
 ?>
