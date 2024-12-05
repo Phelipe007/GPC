@@ -8,6 +8,6 @@ CREATE TABLE `Usuario` (
   `email` varchar(100) DEFAULT NULL,
   `senha` varchar(100) DEFAULT NULL,
   `cpf` varchar(15) DEFAULT NULL,
-  `iFMT` varchar(50) DEFAULT NULL,
+  `ifmt` varchar(50) DEFAULT NULL,
   `idade` int(11) DEFAULT NULL
 );
