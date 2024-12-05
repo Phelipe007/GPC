@@ -15,8 +15,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $ifmt = $_POST['ifmt'];
     $idade = $_POST['idade'];
 
-    //enviarndo os valores do cadastr para o banco com a função salvaNoBanco(), e se for bem sucedida redirecionando para a pagina de login
-    if ($r = salvaNoBanco($tabela, ['nome', 'senha', 'email', 'telefone', 'cpf', 'ifmt', 'idade'], [$nome, $senha, $email, $telefone, $cpf, $ifmt, $idade]));{
+    //Enviando os valores do cadastro para o banco com a função salvaNoBanco()
+    $r = salvaNoBanco($tabela, ['nome', 'senha', 'email', 'telefone', 'cpf', 'ifmt', 'idade'], [$nome, $senha, $email, $telefone, $cpf, $ifmt, $idade]);
+
+    //Se for bem sucedida redirecionando para a pagina de login
+    if ($r == true){
         echo "<script> window.location.href = 'index.html'; </script>"; //redirecionamento com JS
         exit(); //apenas para evitar que o script entre em loop
     }
