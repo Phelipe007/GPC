@@ -1,0 +1,98 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #87ceeb, #f0f8ff);
+    color: #333333;
+    
+}
+
+
+header {
+    background: linear-gradient(to right, #006400, #32cd32); 
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+    font-size: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    margin: 0;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+    padding: 20px;
+}
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    color: #288628; 
+}
+
+form input, form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #288628; 
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+    background: linear-gradient(to right, #288628, #006400);
+    color: white;
+    border: none;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    transform: scale(1.05);
+    background-color: #228b22; 
+}
+
+
+footer {
+    background: #006400;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('bike-pattern.png') repeat; /* Adicione uma imagem de padrão, como bicicletas */
+    opacity: 0.05;
+    z-index: -1;
+}
