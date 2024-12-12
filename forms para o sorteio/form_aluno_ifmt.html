@@ -10,7 +10,43 @@
     <header></header>
     <main>
         <div> 
-            <form action="form_aluno_ifmt" method="POST">
+            <form action="form_aluno_ifmt.php" method="POST">
+
+                <!--Aluno Ifmt-->
+
+                <fieldset>
+                <legend>Matricula</legend>
+                <input type="text" id="mt" name="mt" placeholder="Digite aqui" required>
+                </fieldset><br>
+
+                <fieldset>
+                    <legend>Ano</legend>
+                    <input type="text" id="ano" name="ano" placeholder="Digite aqui" required>
+                </fieldset><br>
+
+                <fieldset>
+                    <legend>Curso</legend>
+                    <input type="text" id="curso" name="curso" placeholder="Digite aqui" required>
+                </fieldset><br>
+
+                <fieldset>
+                    <legend>Turno</legend>
+                    <input type="radio" id="vespertino" name="vespertino">
+                    <label for="Turno">Vespertino</label>
+                    <input type="radio" id="matutino" name="matutino">
+                    <label for="Matutino">Matutino</label>
+                    <input type="radio" id="noturno" name="noturno">
+                    <label for="Noturno">Noturno</label>
+                </fieldset><br>
+
+                <fieldset>
+                    <legend>Ganhará nota por participar?</legend>
+                    <input type="radio" id="gh" name="gh" required>
+                    <label for="Sim">Sim</label>
+                    <input type="radio" id="gh" name="gh" required>
+                    <label for="Nao">Não</label>
+                </fieldset><br>
+
                 <!--PRIMEIRA PERGUNTA-->
                 <fieldset>
                     <legend>Como ficou sabendo?</legend>
