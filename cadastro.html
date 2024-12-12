@@ -17,7 +17,7 @@
             <form action="cadastro.php" method="POST" >
 
                 <script src="cadastro.js"></script>
-''
+
                 <label for="nome">Nome:</label>
                 <input oninvalid="modal()" type="text" name="nome" id="nome" placeholder="Digite o Seu Nome Completo" required><br>
 
@@ -28,7 +28,7 @@
                 <input oninvalid="modal()" type="email" name="email" id="email" placeholder="Digite Seu Email" required><br>
 
                 <label for="telefone">Telefone:</label>
-                <input oninvalid="modal()" type="tel" name="telefone" id="telefone" placeholder="(xx) x xxxx-xxxx" required><br>
+                <input onblur="verificacao()" type="tel" name="telefone" id="telefone" placeholder="(xx) x xxxx-xxxx" required><br>
 
                 <label for="cpf">CPF:</label>
                 <input oninvalid="modal()" type="text" name="cpf" id="cpf" placeholder="Digite Seu CPF" required><br>
@@ -41,7 +41,7 @@
                     <option value="externo">Externo</option>
                 </select><br>
 
-                 <label for="idade">Qual a sua idade</label>
+                <label for="idade">Qual a sua idade</label>
                 <input oninvalid="modal()" type="number" name="idade" id="idade" placeholder="Digite Sua Idade" required><br>
 
                 <input type="submit">   
