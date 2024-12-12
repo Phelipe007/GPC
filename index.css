@@ -1,0 +1,111 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #87ceeb, #f0f8ff);
+    color: #333333;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(imagensLoginCadastro/ciclismo.jpg);
+}
+
+header {
+    background: linear-gradient(to right, #006400, #32cd32); 
+    padding: 20px 0;
+    color: white;
+    font-size: 150%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+h1 {
+    font-weight: bold;
+    padding-left: 40px;
+}
+
+img {
+    max-width: 20%;
+    height: auto;
+    padding-right: 40px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex: 1;
+    height: calc(100vh - 60px); 
+    padding: 20px;
+}
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 200px;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    color: #288628; 
+}
+
+form input, form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #288628; 
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+form input[type="submit"] {
+    background: linear-gradient(to right, #288628, #006400);
+    color: white;
+    border: none;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    transform: scale(1.05);
+    background-color: #228b22; 
+}
+
+@media (max-width: 1000px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        
+    }
+    h1 {
+        font-weight: bold;
+        padding-left: 40px;
+    }
+    
+    img {
+        content: url(imagensLoginCadastro/ifmtQuadrada.png);
+        max-height: 80px;
+    }
+    
+}   
