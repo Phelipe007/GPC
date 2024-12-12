@@ -2,7 +2,8 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="cadastro.css">
     <title>Passeio ciclistico</title>
 </head>
 <body>
@@ -15,20 +16,22 @@
         <section>   
             <form action="cadastro.php" method="POST" >
 
+                <script src="cadastro.js"></script>
+''
                 <label for="nome">Nome:</label>
-                <input type="text" name="nome" id="nome" placeholder="Digite o Seu Nome Completo" required><br>
+                <input oninvalid="modal()" type="text" name="nome" id="nome" placeholder="Digite o Seu Nome Completo" required><br>
 
                 <label for="senha">Senha:</label>
-                <input type="password" name="senha" id="senha" placeholder="Digite Sua Senha" required><br>
+                <input oninvalid="modal()" type="password" name="senha" id="senha" placeholder="Digite Sua Senha" required><br>
 
                 <label for="email">Email:</label>
-                <input type="email" name="email" id="email" placeholder="Digite Seu Email" required><br>
+                <input oninvalid="modal()" type="email" name="email" id="email" placeholder="Digite Seu Email" required><br>
 
                 <label for="telefone">Telefone:</label>
-                <input type="tel" name="telefone" id="telefone" placeholder="(xx) x xxxx-xxxx" required><br>
+                <input oninvalid="modal()" type="tel" name="telefone" id="telefone" placeholder="(xx) x xxxx-xxxx" required><br>
 
                 <label for="cpf">CPF:</label>
-                <input type="text" name="cpf" id="cpf" placeholder="Digite Seu CPF" required><br>
+                <input oninvalid="modal()" type="text" name="cpf" id="cpf" placeholder="Digite Seu CPF" required><br>
 
                 <label for="ifmt">Vínculo com o IFMT:</label>
                 <select name="ifmt" id="ifmt" required>
@@ -39,13 +42,16 @@
                 </select><br>
 
                  <label for="idade">Qual a sua idade</label>
-                <input type="number" name="idade" id="idade" placeholder="Digite Sua Idade" required><br>
+                <input oninvalid="modal()" type="number" name="idade" id="idade" placeholder="Digite Sua Idade" required><br>
 
                 <input type="submit">   
             </form>
         </section>
     </main>
 
-    <footer></footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="cadastro.js"></script>
+
 </body>
 </html>
