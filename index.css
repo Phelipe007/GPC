@@ -7,11 +7,11 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-image: url(imagensLoginCadastro/ciclismo.jpg);
+    background-image: url(imagensLoginCadastro/ciclismo.webp);
 }
 
 header {
-    background: linear-gradient(to right, #006400, #32cd32); 
+    background: linear-gradient(to right, #000000, #000000); 
     padding: 20px 0;
     color: white;
     font-size: 150%;
@@ -19,6 +19,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-image: none;
 
 }
 h1 {
@@ -47,36 +48,42 @@ main {
 
 form {
     background: white;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     max-width: 200px;
-    width: 200px;
-    height: 200px;
+    height: 300px;
     margin: 0 auto;
     padding-bottom: 30px;
-
+    padding-block: 5px;
+    background-color: transparent;
+    border: 1px solid #000000;
+    backdrop-filter: blur(5px);
 }
 
 form label {
     font-weight: bold;
     display: block;
     margin-bottom: 8px;
-    color: #288628; 
+    color: #000000; 
 }
 
 form input, form select {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
-    border: 2px solid #288628; 
+    border: 2px solid #000000; 
     border-radius: 5px;
     font-size: 1rem;
     box-sizing: border-box;
+    backdrop-filter: blur(5px);
+    background-color: transparent;
+    color: b;
+
 }
 
 form input[type="submit"] {
-    background: linear-gradient(to right, #288628, #006400);
+    background: linear-gradient(to right, #000000, #000000);
     color: white;
     border: none;
     font-size: 1rem;
@@ -88,9 +95,19 @@ form input[type="submit"] {
 
 form input[type="submit"]:hover {
     transform: scale(1.05);
-    background-color: #228b22; 
+    background-color: #000000; 
 }
 
+img {
+    max-height: 80px;
+}
+
+.form-title {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #000000;
+    margin-bottom: 20px;
+}
 @media (max-width: 1000px) {
     header {
         display: flex;
@@ -104,7 +121,7 @@ form input[type="submit"]:hover {
     }
     
     img {
-        content: url(imagensLoginCadastro/ifmtQuadrada.png);
+        content: url(imagensLoginCadastro/LogoIFMT-removebg-preview.png);
         max-height: 80px;
     }
     
