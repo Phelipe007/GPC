@@ -24,3 +24,23 @@ function verificacao() {
 
     }
 };
+function calcularIdade(dataNascimento) {
+    
+    hoje = new Date();
+  
+    nascimento=new Date(document.getElementById("data_de_nascimento").value);
+    
+    idade = hoje.getFullYear() - nascimento.getFullYear();
+    document.getElementById("idade").value=idade;
+    const mesAtual = hoje.getMonth();
+    const diaAtual = hoje.getDate();
+    const mesNascimento = nascimento.getMonth();
+    const diaNascimento = nascimento.getDate();
+
+    if (mesAtual < mesNascimento || (mesAtual === mesNascimento && diaAtual < diaNascimento)) {
+        idade--;
+    }
+    
+    return idade;
+}
+

@@ -7,20 +7,29 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-image: url(ciclismo.jpg);
+    background-image: url(imagensLoginCadastro/ciclismo.webp);
 }
 
 header {
     background: linear-gradient(to right, #006400, #32cd32); 
-    text-align: center;
-    padding: 20px 0;
+    padding: 5px 0;
     color: white;
-    font-size: 2rem;
+    font-size: 150%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header h1 {
-    margin: 0;
+    font-weight: bold;
+    padding-left: 40px;
+}
+
+img {
+    max-width: 20%;
+    height: auto;
+    padding-right: 40px;
 }
 
 main {
@@ -34,8 +43,9 @@ main {
 
 form {
     background: white;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
+    padding-top: 10;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     max-width: 400px;
     width: 259px;
@@ -83,15 +93,32 @@ footer {
     color: white;
     width: 100%;
 }
+img {
+    max-height: 80px;
+}
 
-body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('bike-pattern.png') repeat;
-    opacity: 0.05;
-    z-index: -1;
+
+.form-title {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #288628;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1000px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        
+    }
+    h1 {
+        font-weight: bold;
+        padding-left: 40px;
+    }
+    
+    img {
+        content: url(imagensLoginCadastro/LogoIFMT-removebg-preview.png);
+        max-height: 80px;
+    }
 }
