@@ -1,0 +1,297 @@
+[33mcommit f07e3c32873731a6a4c69156d50c1882d1116741[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: tacco5 <martins.t@estudante.ifmt.edu.br>
+Date:   Fri Dec 20 17:53:05 2024 -0400
+
+    Add files via upload
+    
+    tela evento
+
+[33mcommit 2bba02b2d59001c45fb4283cced33fd82601072d[m
+Author: henrique0Anjos <ha8558092@gmail.com>
+Date:   Thu Dec 19 17:36:11 2024 -0300
+
+    mudanças
+    
+    alterações no html
+
+[33mcommit 2816c3d85b3db59340a8b47f95bbcba829f48602[m
+Merge: 4eddec2 7661a77
+Author: tacco5 <martins.t@estudante.ifmt.edu.br>
+Date:   Thu Dec 19 16:35:18 2024 -0400
+
+    Merge branch 'main' of https://github.com/Phelipe007/GPC
+
+[33mcommit 4eddec22e1ac36446a37a5a01454ee2ad2cc656d[m
+Author: tacco5 <martins.t@estudante.ifmt.edu.br>
+Date:   Thu Dec 19 16:34:53 2024 -0400
+
+    criar evento
+
+[33mcommit 7661a777f671fd991aac0f9ee6a44a8acfdc9a55[m
+Author: henrique0Anjos <ha8558092@gmail.com>
+Date:   Thu Dec 19 17:34:05 2024 -0300
+
+    mudanças
+    
+    Alterações feitas no java script
+
+[33mcommit 061bf6e116fb3997993da023c80437601c5fcc9f[m
+Author: gih <g.nakagawa@estudante.ifmt.edu.br>
+Date:   Thu Dec 19 16:26:36 2024 -0400
+
+    Mudanças
+    
+    Mudanças feitas no Html e css do cadastro e index
+
+[33mcommit 5406c683b632f76903b31b53ee450f92a61c9e7a[m
+Author: Feliciana2025 <thais.feliciana@estudante.ifmt.edu.br>
+Date:   Thu Dec 19 16:04:13 2024 -0400
+
+    Modelo logico
+
+[33mcommit 9fd59111095e95f91af7bf78d5d67bb6a1f92636[m
+Author: tacco5 <martins.t@estudante.ifmt.edu.br>
+Date:   Thu Dec 19 14:40:04 2024 -0400
+
+    ajustes nor formularios
+
+[33mcommit 6c64103d933ea08843a78dc2099515b1c293fa6e[m
+Merge: 46b0426 b7757d8
+Author: henrique0Anjos <ha8558092@gmail.com>
+Date:   Thu Dec 12 16:37:31 2024 -0400
+
+    Merge branch 'main' of https://github.com/Phelipe007/GPC
+
+[33mcommit 46b04267cb5e9448015af0fac7dfd0c460a96753[m
+Author: henrique0Anjos <ha8558092@gmail.com>
+Date:   Thu Dec 12 16:37:03 2024 -0400
+
+    perssonalizar a menssagem de erro do telefone
+
+[33mcommit b7757d8f2d55d5ab76078f6b44405d93799ae243[m
+Author: tacco5 <martins.t@estudante.ifmt.edu.br>
+Date:   Thu Dec 12 17:34:18 2024 -0300
+
+    Formularios de inscrição
+    
+    Só estilizar
+
+[33mcommit 3d8f02d7ef6eef491931f12f96cfb49cec30e199[m
+Author: phelipe007 <phelipeifmt@gmail.com>
+Date:   Thu Dec 12 16:26:06 2024 -0400
+
+    Repostagem dos arquivos duplicados
+
+[33mcommit 88bb73a2c414bee8faec316bf221d1d1fb04b8e8[m
+Author: phelipe007 <phelipeifmt@gmail.com>
+Date:   Thu Dec 12 16:22:08 2024 -0400
+
+    duplicados
+
+[33mcommit 54f285d67ca378a31c79fdd5551da3f8811fd2dd[m
+Author: tacco5 <martins.t@estudante.ifmt.edu.br>
+Date:   Thu Dec 12 16:30:48 2024 -0300
+
+    modificações no html de formularios
+
+[33mcommit 25baae760c3fc79765be4de3fbf7cc4ac41fe6b5[m
+Author: gih <g.nakagawa@estudante.ifmt.edu.br>
+Date:   Thu Dec 12 15:29:43 2024 -0400
+
+    css
+    
+    css
+
+[33mcommit 0940500ed4c20bfdc2a203009fd0f635a9efdf53[m
+Author: henrique0Anjos <ha8558092@gmail.com>
+Date:   Thu Dec 12 14:39:28 2024 -0400
+
+    Delete cadastro.java
+
+[33mcommit 138234fb5e98095e88bb11d15f5d2bfeb0e23d35[m
+Author: gih <g.nakagawa@estudante.ifmt.edu.br>
+Date:   Thu Dec 12 14:13:56 2024 -0400
+
+    Estilização do cadastro
+    
+    Cadastro sendo estilizado
+
+[33mcommit 63bf69b6b3266040a5baa78f885c51cce7d28e22[m
+Author: henrique0Anjos <ha8558092@gmail.com>
+Date:   Thu Dec 12 14:12:02 2024 -0400
+
+    verificação de preenchimento do formulário
+
+[33mcommit eb31fa8fd7fe5f8f6fd1fad753290e0c5495db1a[m
+Author: tacco5 <martins.t@estudante.ifmt.edu.br>
+Date:   Mon Dec 9 16:44:22 2024 -0400
+
+    formulario geral
+
+[33mcommit 9fcae74bdc0a20067c8f8f8bcbc15de0c7d14786[m
+Author: gih <g.nakagawa@estudante.ifmt.edu.br>
+Date:   Mon Dec 9 16:41:44 2024 -0400
+
+    Cadastro.css
+    
+    Css básico e base do cadastro
+
+[33mcommit ef22515a8c3e24294170bbe41f4e34618010d709[m
+Author: PH <phelipeifmt@gmail.com>
+Date:   Wed Dec 4 23:34:22 2024 -0400
+
+    Correções Simples
+    
+    Corrigindo a utilidade do 'if'
+
+[33mcommit 57da6c113c2e211c40a6dabd12ef911af594af36[m
+Author: PH <phelipeifmt@gmail.com>
+Date:   Wed Dec 4 23:23:45 2024 -0400
+
+    Delete GPC.md
+    
+    duplicado
+
+[33mcommit d3fec8577c82c3810f90d03aec8f2f726134cf4a[m
+Author: PH <phelipeifmt@gmail.com>
+Date:   Wed Dec 4 23:23:34 2024 -0400
+
+    Delete Sobre Nos.md
+    
+    duplicado
+
+[33mcommit e016e7ea6d34ee9828abf086feb3f97b3afa25b4[m
+Author: PH <phelipeifmt@gmail.com>
+Date:   Wed Dec 4 23:23:04 2024 -0400
+
+    Delete GPC - Geral.pdf
+    
+    estava duplicado
+
+[33mcommit 0945285962e183d00ccdcf42c03a05dd510d1272[m
+Author: PH <phelipeifmt@gmail.com>
+Date:   Wed Dec 4 23:22:46 2024 -0400
+
+    Delete GPC - Planejamento.pdf
+    
+    estava duplicado
+
+[33mcommit 71ed9dbb0a598f2819958ef7ef4fa4ae2e8c0575[m
+Author: PH <phelipeifmt@gmail.com>
+Date:   Wed Dec 4 22:43:21 2024 -0400
+
+    Create README.md
+
+[33mcommit 2e89a78a27acdbcbe451fb31134d64cd7f575f7b[m
+Author: PH <phelipeifmt@gmail.com>
+Date:   Wed Dec 4 22:41:40 2024 -0400
+
+    Create GPC.md
+
+[33mcommit 28aeb5c5ea9fd15468b16b87cdbeb31e69fbe7c3[m
+Author: PH <phelipeifmt@gmail.com>
+Date:   Wed Dec 4 22:37:31 2024 -0400
+
+    Rename README.md to Sobre Nos.md
+
+[33mcommit 4bbd1d98fb887403d82a175970b42d3d5e8e1eb1[m
+Author: PH <phelipeifmt@gmail.com>
+Date:   Wed Dec 4 22:37:03 2024 -0400
+
+    Create README.md
+    
+    Criando o "sobre nós".
+
+[33mcommit f5aec761731a75e3a01f675b5f24a72507c7c1c6[m
+Author: PH <phelipeifmt@gmail.com>
+Date:   Wed Dec 4 22:26:59 2024 -0400
+
+    Atualizações gerais
+
+[33mcommit 288c74b155166267a794a879a8ec2595a369be71[m
+Author: PH <phelipeifmt@gmail.com>
+Date:   Wed Dec 4 22:26:29 2024 -0400
+
+    Automatizando o php de cadastro
+    
+    Automatização do arquivo cadastro.php por meio da função presente no arquivo salvaNoBanco.php
+
+[33mcommit c4ca74316c8f849c74ebd4a76b0e15689dfdc2d3[m
+Author: PH <phelipeifmt@gmail.com>
+Date:   Wed Dec 4 13:03:19 2024 -0400
+
+    Função para salvar os valores no banco de dados
+    
+    Criação previa da função utilizada para salvar os valores do formulário (html) no banco de dados;
+
+[33mcommit 8adfb78c85a9a5427dca7bbb3ba0aeaf3bdf140d[m
+Author: PH <phelipeifmt@gmail.com>
+Date:   Mon Dec 2 23:10:29 2024 -0400
+
+    Organização dos arquivos de planejamento
+    
+    Criando uma pasta para os arquivos de planejamentos!
+
+[33mcommit d89f75bdcf615fd306b8967b8fe41ce031b22a39[m
+Author: PH <phelipeifmt@gmail.com>
+Date:   Mon Dec 2 23:08:42 2024 -0400
+
+    Modificações atualizadas
+    
+    Modificações nos php(s) e no html de cadastro.
+
+[33mcommit 0b64552c132c74270d5784bf468ef67478ec5771[m
+Author: PH <phelipeifmt@gmail.com>
+Date:   Mon Dec 2 22:57:28 2024 -0400
+
+    Mudando o nome de "cadastro.java,java" para só "cadastro.java"
+    
+    O nome do arquivo estava com dois ".java"!
+
+[33mcommit 7beea949038638520e632196f2c8a37e3f2c3762[m
+Author: PH <phelipeifmt@gmail.com>
+Date:   Mon Dec 2 22:55:13 2024 -0400
+
+    Arquivo vazio deletado "formulario.php"
+    
+    Arquivo vazio deletado
+
+[33mcommit 85412cb0310a6af45626cd514c87c53d4d688de8[m
+Author: PH <phelipeifmt@gmail.com>
+Date:   Mon Dec 2 22:54:45 2024 -0400
+
+    Arquivo vazio deletado "forulario.html"
+    
+    será criado outro arquivo para conter os forms
+
+[33mcommit a3720a286dc6f4d618d96c4053283b72777fee1b[m
+Author: henrique0Anjos <ha8558092@gmail.com>
+Date:   Mon Dec 2 15:49:27 2024 -0400
+
+    Add files via upload
+
+[33mcommit 18d3fb664a1b06a6ba6490e53024bffe339540e9[m
+Author: PH <phelipeifmt@gmail.com>
+Date:   Sun Dec 1 01:44:45 2024 -0400
+
+    Modificações no index.php
+
+[33mcommit df20af5d8f97b3ecbbc1df416273a037821febf9[m
+Author: PH <phelipeifmt@gmail.com>
+Date:   Sat Nov 30 18:12:02 2024 -0400
+
+    Modificações no HTML5 e PHP
+
+[33mcommit d6b61a8f6bbed1377e2751ab819c454cd96e5abb[m
+Author: PH <phelipeifmt@gmail.com>
+Date:   Sat Nov 30 18:07:43 2024 -0400
+
+    Modifiações no PHP e HTML
+
+[33mcommit 0dd877783bade06f041cfa37b96ea421c61629b1[m
+Author: PH <phelipeifmt@gmail.com>
+Date:   Sat Nov 30 17:44:57 2024 -0400
+
+    GPC - Planejamento
+    
+    Planejamento geral de toda
