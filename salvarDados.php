@@ -8,7 +8,8 @@ function salvaNoBanco($tabela, $campos, $valores) {
     }
 
     // Construindo a query
-    $sql = "SELECT $campos ". implode(", ", $campos)". "FROM $tabela";
+    $sql = "INSERT INTO $tabela (" . implode(", ", $campos) . ") VALUES (";
+    $sql .= ":" . implode(", :", $campos) . ")";
 
     try {
         $stmt = $pdo->prepare($sql);

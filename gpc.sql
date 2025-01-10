@@ -67,4 +67,5 @@ CREATE TABLE Externo_nao_aluno (
     id_externo_nao_aluno INT PRIMARY KEY,
     profissao VARCHAR(100),
     vinculo VARCHAR(100),
-    como_ficou_sabendo VARCHAR(255),
+    como_ficou_sabendo VARCHAR(255)
+)

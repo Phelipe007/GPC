@@ -1,12 +1,8 @@
-
-
-
-
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang='pt-BR'>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Eventos</title>
 </head>
 <body>
@@ -16,33 +12,57 @@
     
         <section>
 
-            <div class="container">
+        <form action='evento.php  method='POST'>
+            <div class= container >
 
-                <h2>Data e Horário</h2>
-                <p>Data: </p>
-                <p>Horario: </p>
+                <label>Nome: </label>
+                <input type= text' name='nome' id='nome'> 
+                <br>
 
-                <h2>Local</h2>
-                <p>Data: </p>
+                <label>Data: </label>
+                <input type='date' name='data' id='data'> 
+                <br>
+                
+                <label>horario: </label>
+                <input type='time' name='horario' id='horario'>
+                <br>
 
-                <h2>Trajeto</h2>
-                <p>Percuso: </p>
+                <label>Local: </label>
+                <input type='text' name='local' id='local' placeholder='Digite o local do evento'>
+                <br>
 
-                <h2>Detalhes do Evento</h2>
+                <label>Trajeto: </label>
+                <input type='text' name='trajeto' id='trajeto' placeholder='Inicio - Fim'>
+                <br>
 
-                <p></p>
-        
-                <input type="submit" value="Inscrever-se">
+                <label>Detalhes do Evento: </label> <br>
+                <textarea name='detalhes_do_evento' id='detalhes_do_evento' cols='30' rows='5'></textarea>
+                <br>
+
+                <input type='submit' value='BUSCAR'>
                 <p>Se inscreva para não perder esse dia incrível.</p>
-        
 
             </div>
-    
+            </form>
+        <?php 
+            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                include('buscaDados.php');
+                
+                $data = $_POST['data'];
+                
+                $dados = [];
+
+                $dados = BuscaDados("Eventos", $data);
+            }
+        ?>
+
+        <?php 
+            echo "<label>Nome: " . $dados[0]['nome'] . "</label>" ;
+        ?>
+
         </section>
         <footer>
             <p>&copy; 2025 Passeio Ciclístico.</p>
         </footer>
-    
-
 </body>
 </html>

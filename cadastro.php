@@ -1,7 +1,7 @@
 <?php
 
 //ncluindo a função salvaNoBanco()
-include 'salvarNoBanco.php';
+include 'salvarDados.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
