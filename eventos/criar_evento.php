@@ -1,25 +1,27 @@
 <?php
 
-//incluindo a função salvaNoBanco()
-include 'salvarNoBanco.php';
+//incluindo a função salvardados()
+include 'C:\xampp\htdocs\gpc\salvarDados.php';
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $tabela = "Usuario";
+    $tabela = "Eventos";
 
     $data = $_POST['data'];
     $horario = $_POST['horario'];
     $local = $_POST['local'];
-    $trajeto = $_POST['trajeto'];
-    $detalhes_do_evento = $_POST['detalhes_do_evento'];
+    $percurso = $_POST['percurso'];
+    $descricao = $_POST['descricao'];
 
     //Enviando os valores do cadastro para o banco com a função salvaNoBanco()
-    $r = salvaNoBanco($tabela, ['data', 'horario', 'local', 'trajeto', 'detalhes_do_evento'], [$data, $horario, $local, $trajeto, $detalhes_do_evento]);
+    $r = salvarDados($tabela, ['data', 'horario', 'local', 'percurso', 'descricao'], [$data, $horario, $local, $percurso, $descricao]);
 
     //Se for bem sucedida redirecionando para a pagina de login
     if ($r == true){
         echo "<script> alert('Criado com sucesso') </script>";
         exit(); //apenas para evitar que o script entre em loop
     }
+} else {
+    print('não foi');
 }
 ?>

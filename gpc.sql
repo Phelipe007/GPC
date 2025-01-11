@@ -68,4 +68,3 @@ CREATE TABLE Externo_nao_aluno (
     profissao VARCHAR(100),
     vinculo VARCHAR(100),
     como_ficou_sabendo VARCHAR(255)
-)

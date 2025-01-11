@@ -1,8 +1,8 @@
 <?php
-function salvaNoBanco($tabela, $campos, $valores) {
+function salvarDados($tabela, $campos, $valores) {
     include "dbc.php";
 
-    // Verificação para saber se esles estão alinhados
+    // Verificação para saber se eles estão alinhados
     if (count($campos) !== count($valores)) {
         die("<script> alert(Erro: O número de campos e valores não corresponde.) </script>");
     }
