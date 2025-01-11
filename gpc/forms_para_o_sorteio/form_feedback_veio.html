@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form_feedback_veio</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <div> 
+            <form action="form_feedback_veio.php" method="POST">
+            
+            <label for="p2">Nível de satisfação?</label><br>
+            <input type="text" name="p1" id="p1" placeholder="Digite aqui" required><br>
+
+            <label for="p2">Gostou das premiações?</label><br>
+            <input type="text" name="p2" id="p2" placeholder="Digite aqui" required><br>
+
+            <label for="p3">Gostou do trajeto?</label><br>
+            <input type="text" name="p3" id="p3" placeholder="Digite aqui" required><br>
+
+            <label for="p4">Gostou da organização?</label><br>
+            <input type="text" name="p4" id="p4" placeholder="Digite aqui" required><br>
+
+            <label for="p5?">Gostou da (data, horário, trajeto, período, outro)?</label><br>
+            <input type="text" name="p5" id="p5" placeholder="Digite aqui" required><br>
+
+            <label for="p6">Pontos positivos-negativos (sugestão)?</label><br>
+            <input type="text" name="p6" id="p6" placeholder="Digite aqui" required><br>
+
+
+            <fieldset>
+                <legend aria-label="Participaria de novo?">Participaria de novo?</legend>
+
+                <label for="sim">Sim, Eu participaria novamente</label>
+                <input type="radio" name="participacaoFutura" id="sim" value="sim" required>
+    
+                <label for="nao">Não, eu não participaria novamente</label>
+                <input type="radio" name="participacaoFutura" id="nao" value="nao" required>    
+            </fieldset>
+            
+            <input type="submit">
+
+            </form>
+        <div>
+    </main>
+</body>
+</html>

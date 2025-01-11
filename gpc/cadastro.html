@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="cadastro.css">
+    <title>Passeio ciclistico</title>
+</head>
+<body>
+    <!--Titulo-->
+    <header>
+        <h1>Passeio Ciclistico</h1>
+    </header>
+    <main>
+        <!--Login-->
+        <section>   
+            <form action="cadastro.php" method="POST" >
+                <form action="cadastro.css" method="POST">
+                    <h2 class="form-title">Cadastro</h2> 
+                <script src="cadastro.js"></script>
+
+                <label for="nome">Nome:</label>
+                <input oninvalid="modal()" type="text" name="nome" id="nome" placeholder="Digite o Seu Nome Completo" required><br>
+                 
+                <label for="senha">Senha:</label>
+                <input oninvalid="modal()" type="password" name="senha" id="senha" placeholder="Digite Sua Senha" required><br>
+
+                <label for="email">Email:</label>
+                <input oninvalid="modal()" type="email" name="email" id="email" placeholder="Digite Seu Email" required><br>
+
+                <label for="telefone">Telefone:</label>
+                <input onblur="verificacao()" type="tel" name="telefone" id="telefone" placeholder="(DDD) 9 9999-9999" required><br>
+
+                <label for="cpf">CPF:</label>
+                <input oninvalid="modal()" type="text" name="cpf" id="cpf" placeholder="Digite Seu CPF" required><br>
+
+                <label for="ifmt">Vínculo com o IFMT:</label>
+                <select name="ifmt" id="ifmt" required>
+                    <option value="">Selecione seu vínculo</option>
+                    <option value="servidor">Servidor</option>
+                    <option value="externo">Aluno</option>
+                    <option value="externo">Externo</option>
+                </select><br>
+
+                <label for="idade">Qual sua data de nascimento</label>
+                <input onchange= "calcularIdade()" type="date" name="data_de_nascimento" id="data_de_nascimento" required><br>
+                <input type="text" name="idade" id="idade" readonly><br>
+
+                <input type="submit">
+            </form>
+        </section>
+    </main>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="cadastro.js"></script>
+
+</body>
+</html>
