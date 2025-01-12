@@ -20,7 +20,6 @@ function salvarDados($tabela, $campos, $valores) {
         }
 
         if ($stmt->execute()) {
-            echo "<script> alert('Formulário enviado com sucesso!') </script>";
             return $r = true;
         } else {
             echo "<script> alert('Erro ao enviar formulário.') </script>";

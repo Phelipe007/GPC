@@ -1,128 +1,120 @@
+/* Estilo Global */
 body {
-    font-family: 'Arial', sans-serif;
     margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom, #87ceeb, #f0f8ff);
-    color: #333333;
+    font-family: Arial, sans-serif;
+    background: #f4f4f9;
+    color: #333;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-image: url(imagensLoginCadastro/ciclismo.webp);
 }
 
 header {
-    background: linear-gradient(to right, #000000, #000000); 
-    padding: 20px 0;
+    background-color: #000;
     color: white;
-    font-size: 150%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: none;
-
-}
-h1 {
-    font-weight: bold;
-    padding-left: 40px;
-}
-
-img {
-    max-width: 20%;
-    height: auto;
-    padding-right: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
+    font-size: 1.5rem;
     margin: 0;
 }
 
-main {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    flex: 1;
-    height: calc(100vh - 60px); 
-    padding: 20px;
+header img {
+    max-width: 20%;
+    height: auto;
 }
 
-form {
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.login-section {
     background: white;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    max-width: 200px;
-    height: 300px;
-    margin: 0 auto;
-    padding-bottom: 30px;
-    padding-block: 5px;
-    background-color: transparent;
-    border: 1px solid #000000;
-    backdrop-filter: blur(5px);
-}
-
-form label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 8px;
-    color: #000000; 
-}
-
-form input, form select {
+    max-width: 400px;
     width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 2px solid #000000; 
-    border-radius: 5px;
-    font-size: 1rem;
-    box-sizing: border-box;
-    backdrop-filter: blur(5px);
-    background-color: transparent;
-    color: b;
-
-}
-
-form input[type="submit"] {
-    background: linear-gradient(to right, #000000, #000000);
-    color: white;
-    border: none;
-    font-size: 1rem;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.3s, background-color 0.3s;
-}
-
-form input[type="submit"]:hover {
-    transform: scale(1.05);
-    background-color: #000000; 
-}
-
-img {
-    max-height: 80px;
 }
 
 .form-title {
-    text-align: center;
     font-size: 1.5rem;
-    color: #000000;
     margin-bottom: 20px;
+    color: #000;
 }
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: flex;
+    justify-content: left;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsividade */
 @media (max-width: 1000px) {
     header {
-        display: flex;
-        justify-content: space-between;
-        padding: 10px 20px;
-        
+        flex-direction: column;
+        text-align: center;
     }
-    h1 {
-        font-weight: bold;
-        padding-left: 40px;
+
+    header img {
+        max-width: 50%;
     }
-    
-    img {
-        content: url(imagensLoginCadastro/LogoIFMT-removebg-preview.png);
-        max-height: 80px;
+
+    .main-content {
+        padding: 20px 10px;
     }
-    
-}   
+
+    .login-section {
+        width: 90%;
+    }
+}

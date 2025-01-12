@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $idade = $_POST['idade'];
 
     //Enviando os valores do cadastro para o banco com a função salvaNoBanco()
-    $r = salvaNoBanco($tabela, ['nome', 'senha', 'email', 'telefone', 'cpf', 'ifmt', 'idade'], [$nome, $senha, $email, $telefone, $cpf, $ifmt, $idade]);
+    $r = salvarDados($tabela, ['nome', 'senha', 'email', 'telefone', 'cpf', 'ifmt', 'idade'], [$nome, $senha, $email, $telefone, $cpf, $ifmt, $idade]);
 
     //Se for bem sucedida redirecionando para a pagina de login
     if ($r == true){

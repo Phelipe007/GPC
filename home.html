@@ -3,26 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu de Hambúrguer</title>
     <link rel="stylesheet" href="home.css">
+    <title>Eventos</title>
 </head>
 <body>
-
-    <div class="profile">
-        <a href="perfil.html"> <img src="C:\xampp\htdocs\gpc\imagens\perfil.jpg" alt="Perfil" ></a>
-    </div>
-
-
-    <div class="menu-evento-de-verao">
-        <div class="menu-evento">
-          <img src="C:\xampp\htdocs\gpc\imagens\evento.jpg" alt="evento"></a>
-            <img src="https://via.placeholder.com/300x200" alt="Evento de Verão">
-            <h2>Evento de Verão</h2>
-            <a href="eventos\evento.php"><button>Mostar mais</button></a>
+    <header>
+        <div class="header">
+            <h1>Perfil de Usuario</h1>
+            <button class="menu-toggle" id="menuToggle">☰</button>  <!-- Ícone do menu -->
+            <div class="user-icon"><a href="perfil.php">👤</a></div>  <!-- Ícone de perfil -->
         </div>
-    </div>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="perfil.php">Meu Perfil</a></li>
+            <li><a href="#">Formulários</a></li>
+            <li><a href="sair.php">Sair</a></li>
+        </ul>
+    </aside>
+    <main class="content">
+        <div class="event-header">
+            <h2>Evento de Verão</h2>
+            <img src="imagens/evento.jpg" alt="Foto do Evento" class="event-img">
+        </div>
+        <div class="event-details">
+            <h3>Detalhes do Evento:</h3>
+            <p><strong>Data:</strong> 15 de Janeiro de 2025</p>
+            <p><strong>Local:</strong> Praia de Copacabana</p>
+            <p><strong>Descrição:</strong> Um evento ao ar livre com atividades esportivas e culturais para todas as idades!</p>
+        </div>
+    </main>
+
+    <script src="home.js"></script>
 </body>
 </html>
 
-    
 
