@@ -1,66 +1,83 @@
 <!DOCTYPE html>
-<html lang='pt-BR'>
+<html lang="pt-br">
 <head>
-    <meta charset='UTF-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>Eventos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="evento.css">
+    <title>Evento</title>
 </head>
 <body>
     <header>
-        <h1>Eventos</h1>
+        <div class="header">
+            <h1>Eventos</h1>
+            <button class="menu-toggle" id="menuToggle">☰</button>  <!-- Ícone do menu -->
+            <div class="user-icon"><a href="perfil.php">👤</a></div>  <!-- Ícone de perfil -->
+        </div>
     </header>
-    
-        <section>
-        
-        <?php 
-           include 'C:\xampp\htdocs\gpc\dbc.php';
-       
-           try {
-               // Criando a consulta SQL
-               $sql = "SELECT * FROM Eventos";
 
-               // Prepare e execute a consulta
-               $stmt = $pdo->prepare($sql);
+    <aside class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="../home.php">Home</a></li>
+            <li><a href="perfil.php">Meu Perfil</a></li>
+            <li><a href="#">Formulários</a></li>
+            <li><a href="sair.php">Sair</a></li>
+        </ul>
+    </aside>
 
-               if ($stmt->execute()) {
-                   // Armazene os resultados em um array
-                    while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
-                        print "
-                            <div class='container'>
+    <section>
+        <main class='content'>
+            <div class='event-grid'>
+                <?php
+                include '../dbc.php';
+                session_start();
 
-                            <label>Nome:" . $row['nome'] . " </label>
-                            <br>
-
-                            <label>Data: " . $row['data'] . " </label>
-                            <br>
-
-                            <label>horario: " . $row['horario'] . " </label>
-                            <br>
-
-                            <label>Local: " . $row['local'] . " </label>
-                            <br>
-
-                            <label>Percurso: " . $row['percurso'] . " </label>
-                            <br>
-
-                            <label>Detalhes do Evento: " . $row['descricao'] . " </label> <br>
-                            <br>
-
-                        </div>" ;
-                    }
+                // Verificar se o ID do evento foi enviado via GET
+                if (isset($_GET['id_evento'])) {
+                    $_SESSION['id_evento'] = $_GET['id_evento']; // Atualiza a variável de sessão
                 }
-            } catch (PDOException $e) {
-               die("Erro: " . $e->getMessage());
-            }
-        ?>
 
-        <?php 
-                
-        ?>
+                if (isset($_SESSION['id_evento'])) {
+                    $id_evento = $_SESSION['id_evento'];
+                    try {
+                        // Consulta SQL
+                        $sql = "SELECT * FROM Eventos WHERE id_evento = :id_evento";
+                        $stmt = $pdo->prepare($sql);
+                        $stmt->bindParam(':id_evento', $id_evento, PDO::PARAM_INT);
 
-        </section>
-        <footer>
-            <p>&copy; 2025 Passeio Ciclístico.</p>
-        </footer>
+                        if ($stmt->execute()) {
+                            $eventoEncontrado = false;
+
+                            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                                $eventoEncontrado = true;
+
+                                echo "
+                                <div class='event-card'>
+                                    <h3>" . $row['nome'] . "</h3>
+                                    <img src='" . $row['imagem'] . "' alt='Foto do Evento' class='event-img'>
+                                    <p><strong>Data: </strong>" . $row['data'] . "</p>
+                                    <p><strong>Local: </strong>" .  $row['local'] . "</p>
+                                    <p><strong>Descrição: </strong>" . $row['descricao'] . "</p>
+                                </div>";
+                            }
+
+                            if (!$eventoEncontrado) {
+                                echo "<p>Nenhum evento encontrado para o ID fornecido.</p>";
+                            }
+                        } else {
+                            echo "<p>Erro ao buscar o evento no banco de dados.</p>";
+                        }
+                        
+                    } catch (PDOException $e) {
+                        die("<p>Erro: " . $e->getMessage() . "</p>");
+                    }
+                } else {
+                    echo "<p>Nenhum evento selecionado. Por favor, selecione um evento.</p>";
+                }
+                ?>
+            </div>
+        </main>
+    </section>
+    <script src="evento.js"></script>
 </body>
 </html>
+

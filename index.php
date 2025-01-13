@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 // Exibe mensagem de sucesso e redireciona para a página principal
                 echo "<script>alert('Login Realizado Com Sucesso');</script>";
-                header('Location: home.html');
+                header('Location: home.php');
                 exit;
             } else {
                 // Caso as credenciais estejam erradas

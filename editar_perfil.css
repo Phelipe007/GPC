@@ -3,11 +3,12 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
 }
+
 .header {
     background-color: #000000;
     color: white;
     display: flex;
-    justify-content: center;  /* Isso vai centralizar o conteúdo horizontalmente */
+    justify-content: center;
     align-items: center;
     padding: 15px 20px;
 }
@@ -15,8 +16,8 @@ body {
 .header h1 {
     font-size: 25px;
     margin: 0;
-    flex-grow: 1;  /* Permite que o título ocupe o espaço restante */
-    text-align: center; /* Centraliza o texto dentro do h1 */
+    flex-grow: 1;
+    text-align: center;
 }
 
 .menu-toggle {
@@ -26,8 +27,8 @@ body {
     font-size: 24px;
     padding: 10px;
     cursor: pointer;
-    position: absolute; /* Isso vai posicionar o ícone à esquerda */
-    left: 20px;  /* Ajuste a distância da esquerda */
+    position: absolute;
+    left: 20px;
 }
 
 .header .user-icon {
@@ -39,11 +40,10 @@ body {
     padding: 10px;
 }
 
-/* Sidebar */
 .sidebar {
     position: fixed;
     top: 0;
-    left: -200px; /* Escondida inicialmente */
+    left: -200px;
     width: 200px;
     height: 100%;
     background-color: #000000;
@@ -72,43 +72,49 @@ body {
     text-decoration: underline;
 }
 
-/* Sidebar visível */
 .sidebar.open {
     left: 0;
     padding: 20px;
-    width: 200px    ;
+    width: 200px;
 }
 
 .main-content {
     margin-left: 240px;
+    margin-top: 20px;
     padding: 20px;
 }
+
 .profile-section {
     background-color: white;
     border-radius: 5px;
     padding: 40px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 .profile-section h2 {
     margin: 0;
     border-bottom: 2px solid #000000;
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
+
 .form-group {
     margin-bottom: 20px;
 }
+
 .form-group label {
     display: block;
     margin-bottom: 5px;
 }
+
 .form-group input {
     width: 98%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    display: flex
+    display: flex;
 }
+
 .form-group button {
     background-color: #000000;
     color: white;
@@ -117,27 +123,59 @@ body {
     border-radius: 4px;
     cursor: pointer;
 }
+
 .form-group button:hover {
     background-color: #000000;
 }
+
 .profile-picture {
     display: flex;
-    align-items: center;  /* Alinha verticalmente o texto e a imagem */
-    margin-bottom: 20 0px;
-    padding: 20px;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-.profile-picture img {
-    width: 25%;
-    height: 25%;
+.profile-image-container {
+    position: relative;
+    margin-right: 50px;
+}
+
+.profile-image {
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
-    margin-right: 50px;  /* Adiciona espaço entre a imagem e o texto */
+    object-fit: cover;
+}
+
+.blur-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+    border-radius: 300px;
+}
+
+.profile-image-container:hover .blur-overlay {
+    opacity: 1;
+    border-radius: 300px;
+}
+
+.image-input {
+    display: none;
 }
 
 .profile-info {
+    flex-grow: 1;
     display: flex;
-    flex-direction: column;  /* Isso alinha o texto verticalmente */
+    flex-direction: column;
     justify-content: center;
-    width: 98%;
-    padding: 20px;
 }

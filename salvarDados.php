@@ -7,9 +7,11 @@ function salvarDados($tabela, $campos, $valores) {
         die("<script> alert(Erro: O número de campos e valores não corresponde.) </script>");
     }
 
+
     // Construindo a query
     $sql = "INSERT INTO $tabela (" . implode(", ", $campos) . ") VALUES (";
     $sql .= ":" . implode(", :", $campos) . ")";
+
 
     try {
         $stmt = $pdo->prepare($sql);

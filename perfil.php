@@ -46,7 +46,7 @@
                             <div class='profile-section'>
                                 <h2>Dados do Perfil</h2>
                                 <div class='profile-picture'>
-                                    <img src='imagens\perfil.jpg' alt='Foto de Perfil'>
+                                    <img src='imagens/" . $row['imagem'] . "' alt='Foto de Perfil'>
                                     <div class='profile-info'>
                                         <form>
                                             <div class='form-group'>

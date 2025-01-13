@@ -16,7 +16,7 @@
         
     <aside class="sidebar" id="sidebar">
         <ul>
-            <li><a href="home.html">Home</a></li>
+            <li><a href="home.php">Home</a></li>
             <li><a href="perfil.php">Meu Perfil</a></li>
             <li><a href="#">Formulários</a></li>
             <li><a href="sair.php">Sair</a></li>
@@ -48,12 +48,18 @@
                         <div class='profile-section'>
                             <h2>Editar e Alterar Dados do Perfil</h2>
                             <div class='profile-picture'>
-                                <img src='imagens/perfil.jpg' alt='Foto de Perfil'>
+                                <div class='profile-image-container'>
+                                    <img src='imagens/IMG_20241215_082328549_HDR.jpg' alt='Foto de Perfil' class='profile-image'>
+                                    <div class='blur-overlay'>
+                                        <span>Editar Imagem</span>
+                                    </div>
+                                    <input type='file' id='imageInput' class='image-input' accept='image/*'>
+                                </div>
                                 <div class='profile-info'>
                                     <form>
                                         <div class='form-group'>
                                             <label for='name'>Nome</label>
-                                            <input type='text' value='" .   $row['nome'] . "' id='name' name='name' placeholder='Digite seu nome'>
+                                            <input type='text' value='" . $row['nome'] . "' id='name' name='name' placeholder='Digite seu nome'>
                                         </div>
                                         <div class='form-group'>
                                             <label for='email'>E-mail</label>

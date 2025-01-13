@@ -6,7 +6,8 @@ CREATE TABLE Usuario (
     senha VARCHAR(100),
     cpf VARCHAR(11) UNIQUE,
     ifmt BOOLEAN,
-    idade INT
+    idade INT,
+    imagem VARCHAR(255)
 );
 
 CREATE TABLE Eventos (
@@ -17,6 +18,7 @@ CREATE TABLE Eventos (
     local VARCHAR(100),
     horario TIME,
     percurso VARCHAR(255),
+    imagem VARCHAR(255),
     descricao TEXT,
     FOREIGN KEY (id_criador) REFERENCES Usuario(id_usuario)
 );

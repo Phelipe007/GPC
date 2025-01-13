@@ -11,7 +11,7 @@
     </header>
     
         <section>
-            <form action="criar_evento.php" method="POST">
+            <form action="criar_evento.php" method="POST" enctype="multipart/form-data">
                 <div class="container"> 
 
                     <label>Nome: </label>
@@ -34,11 +34,16 @@
                     <input type="text" name="percurso" id="percurso" placeholder="Inicio - Fim">
                     <br>
 
+                    <label>Imagem do Evento: </label>
+                    <input type="file" name="imagem" id="imagem" accept="image/*" placeholder="Imagem do evento">
+                    <br>
+
+
                     <label>Descrição: </label> <br>
                     <textarea name="descricao" id="descricao" cols="30" rows="5"></textarea>
                     <br>
             
-                    <a href="evento.php"> <input type="submit" value="Inscreva-se"> </a>
+                    <button type="submit" value="Inscreva-se"></button>
                     <p>Se inscreva para não perder esse dia incrível.</p>
 
                 </div>
